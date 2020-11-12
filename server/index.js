@@ -2,8 +2,7 @@
 const express = require('express')
 //function을 이용해서 app을 만든다.
 const app = express()
-// 포트번호
-const port = 5000
+
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const config = require('./config/key');
@@ -32,6 +31,11 @@ mongoose.connect(config.mongoURI, {
 //root dir에 오면 hello world 출력
 app.get('/', (req, res) => res.send('Hello World 메리 크리스마스'))
 
+app.get('/api/hello', (req, res) => {
+    
+    
+res.send("안녕하세요~")
+})
 
 app.post('/api/users/register', (req, res) => {
 
@@ -115,6 +119,7 @@ app.get('/api/users/logout', auth, (req , res) => {
         })
 })
 
-
+// 포트번호
+const port = 5000;
 //port 5000번에서 실행한다.
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
