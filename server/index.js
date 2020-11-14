@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const config = require('./config/key');
 const { auth } = require('./middleware/auth');
-const { User } = require('./models/User');
+const { User } = require('./models/User'); 
 
 //application/x-www-form-urlencoded
 //바디파서 클라이언트에서 가져올 수 있게 분석..
