@@ -7,7 +7,6 @@ import { Row } from 'antd';
 
 function LandingPage() {
 
-
     const [Movies, setMovies] = useState([])
     const [MainMovieImage, setMainMovieImage] = useState(null)
     const [CurrentPage, setCurrentPage] = useState(0)
@@ -48,7 +47,7 @@ function LandingPage() {
             {/* Main Image */}
 
             {/* backdroppath를 가져오기전에 렌더링을 했다.
-             && 표현 조건부 렌더링으로서 렌더링 중에 값이 있으면 가져온다!! */}
+             && 표현 조건부렌더링으로서 렌더링 중에 값이 있으면 가져온다!! */}
         {MainMovieImage &&
             <MainImage 
             image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
@@ -89,9 +88,7 @@ function LandingPage() {
                 <button onClick={loadMoreItems}>Load More</button>
             </div>
 
-
         </div>
-
         </>
     )
 }
