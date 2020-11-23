@@ -69,6 +69,7 @@ function LandingPage() {
                 // React.Fragment 옆에 key값을 붙여줘야 err를 잡아준다.
                 <React.Fragment key={index}>
                     <GridCards 
+                        langdingPage
                         image={movie.poster_path ?
                         `${IMAGE_BASE_URL}w500${movie.poster_path}` : null}
                         movieId={movie.id}
