@@ -61,9 +61,8 @@ function MovieDetail(props) {
 
                 <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
                     {/* localStorage에서 id를 가져온다. f12 application tab 확인 */}
-                    <Favorite movieInfo={Movie} movieId={movieId} userFrom={localStorage.getItem('userId')} />
+                    <Favorite movieInfo={Movie}  movieId={movieId} userFrom={localStorage.getItem('userId')} />
                 </div>
-
                 {/* Movie Info */}
 
             <MovieInfo
